@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TextCraft - Text Editing SaaS Platform
 
-## Getting Started
+TextCraft is a modern SaaS platform for AI-powered text generation and editing. It provides a powerful solution for content creators, marketers, and writers to generate high-quality content quickly.
 
-First, run the development server:
+## 🎨 UI Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Responsive Design**: Fully responsive UI that works on all device sizes
+- **Dark Mode Support**: Seamless dark/light mode switching with system preference detection
+- **Modern UI Components**: Clean, accessible component library built with Tailwind CSS
+- **Consistent Design System**: Cohesive design language throughout the application
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Core Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Text Generation**: AI-powered content generation for various purposes
+- **Templates**: Pre-built templates for different content types
+- **Customization**: Advanced options to tailor generated content to your needs
+- **User Profiles**: Personal workspace for saved content and preferences
+- **Email Integration**: Send generated content directly via email
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technology Stack
 
-## Learn More
+- **Next.js**: React framework for building the UI
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **Clerk**: Authentication and user management
+- **Supabase**: Database and backend functions
+- **Next-themes**: Dark mode implementation
+- **Resend**: Email delivery service
 
-To learn more about Next.js, take a look at the following resources:
+## 🏁 Getting Started
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Prerequisites
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Node.js 18+ and npm
 
-## Deploy on Vercel
+### Installation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/textcraft.git
+   cd textcraft
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables
+   ```bash
+   cp .env.local.example .env.local
+   # Edit .env.local with your credentials
+   ```
+
+4. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser
+
+## 🔧 Configuration
+
+### Environment Variables
+
+The following environment variables are required:
+
+- `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`: Clerk public key
+- `CLERK_SECRET_KEY`: Clerk secret key
+- `NEXT_PUBLIC_SUPABASE_URL`: Supabase project URL
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`: Supabase anonymous key
+- `SUPABASE_SERVICE_ROLE_KEY`: Supabase service role key
+- `RESEND_API_KEY`: API key for Resend email service
+
+### Setting up Resend
+
+1. Sign up for a Resend account at [resend.com](https://resend.com)
+2. Create an API key in the Resend dashboard
+3. Add your API key to the `.env.local` file as `RESEND_API_KEY`
+4. Verify your domain in Resend for better deliverability (optional but recommended)
+
+## 📖 Documentation
+
+For more detailed information about setting up Clerk and Supabase, see:
+- [CLERK-SUPABASE-SETUP.md](./CLERK-SUPABASE-SETUP.md)
+- [SUPABASE-SETUP-GUIDE.md](./SUPABASE-SETUP-GUIDE.md)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📝 License
+
+This project is licensed under the MIT License.
